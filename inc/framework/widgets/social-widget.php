@@ -25,6 +25,7 @@
 					array( 
 						'fallback_cb' => false,
 						'menu' => $nav_menu,
+						'theme_location' 	=> 'placeholderlocation',
 						'link_before' => '<span class="screen-reader-text">',
 						'link_after' => '</span>',
 						'menu_class' => 'menu social-menu-widget clearfix'

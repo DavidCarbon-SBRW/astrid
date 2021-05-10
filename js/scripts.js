@@ -1,4 +1,3 @@
-
 //Menu dropdown animation
 jQuery(function($) {
 	$('.sub-menu').hide();
@@ -130,8 +129,8 @@ jQuery(function($) {
 //Mobile menu
 jQuery(function($) {
 		var	menuType = 'desktop';
-
-		$(window).on('load resize', function() {
+	
+		function initMobileMenu() {
 			var currMenuType = 'desktop';
 
 			if ( matchMedia( 'only screen and (max-width: 1024px)' ).matches ) {
@@ -155,7 +154,10 @@ jQuery(function($) {
 					$('.btn-submenu').remove();
 				}
 			}
-		});
+		}
+	
+		$(document).ready( initMobileMenu );
+		$(window).on( 'resize', initMobileMenu );
 
 		$('.btn-menu .fa').on('click', function() {
 			$('#mainnav-mobi').slideToggle(300);
