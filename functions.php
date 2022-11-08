@@ -601,3 +601,8 @@ function astrid_editor_styles() {
 
 }
 add_action( 'enqueue_block_editor_assets', 'astrid_editor_styles' );
+
+/**
+ * Review notice
+ */
+require get_template_directory() . '/inc/notices/class-airi-review.php';
