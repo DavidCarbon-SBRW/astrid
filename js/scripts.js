@@ -28,11 +28,6 @@ jQuery(function($) {
      $( '.social-menu-widget li a' ).attr( 'target','_blank' );
 });
 
-//Fit Vids
-jQuery(function($) {
-    $("body").fitVids();  
-});
-
 //Video header
 jQuery(function($) {
     var testMobile;
@@ -44,8 +39,7 @@ jQuery(function($) {
 
     testMobile = isMobile.iOS(); 
 	$(window).on('ready load', function () {
-		$('#wp-custom-header').fitVids();
-			
+		//TODO: Reize Video Size
 		if (testMobile != null) {
 			$('#wp-custom-header-video-button').css('opacity', '0');
 			$('#wp-custom-header-video').prop('controls',true); 
@@ -84,7 +78,7 @@ jQuery(function($) {
     var fading = $('.header-info');
 
 	$(window).bind('scroll', function(){
-	    var offset = $(document).scrollTop()
+	    var offset = $(document).scrollTop();
 	    var opacity = 0;
 	    if( offset <= fadeStart ){
 	        opacity = 1;
@@ -121,8 +115,8 @@ jQuery(function($) {
 	}
 
 	var threeCols = $(".page-template-page_widgetized section.at-3-col");
-	for(var i = 0; i < threeCols.length; i+=3) {
-	  threeCols.slice(i, i+3).wrapAll("<div class='multicolumn-row clearfix'></div>");
+	for(var i2 = 0; i2 < threeCols.length; i2+=3) {
+	  threeCols.slice(i2, i2+3).wrapAll("<div class='multicolumn-row clearfix'></div>");
 	}
 });
 
@@ -166,7 +160,7 @@ jQuery(function($) {
 
 		$(document).on('click', '#mainnav-mobi li .btn-submenu', function(e) {
 			$(this).toggleClass('active').next('ul').slideToggle(300);
-			e.stopImmediatePropagation()
+			e.stopImmediatePropagation();
 		});	
 });
 
