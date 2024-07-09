@@ -183,7 +183,7 @@ require get_template_directory() . "/inc/framework/widgets/social-widget.php";
  * Enqueue scripts and styles.
  */
 function astrid_scripts() {
-	wp_enqueue_style( 'astrid-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'astrid-style', get_template_directory_uri() . '/css/styles/classic.min.css');
 
 	$body_font 		= get_theme_mod('body_font_name', '//fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic');
 	$headings_font 	= get_theme_mod('headings_font_name', '//fonts.googleapis.com/css?family=Josefin+Sans:300italic,300');
@@ -197,14 +197,14 @@ function astrid_scripts() {
 
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/font-awesome.min.css' );	
 
-	wp_enqueue_script( 'astrid-scripts', get_template_directory_uri() . '/js/combined.min.js', array('jquery'), '20240706', true );
+	wp_enqueue_script( 'astrid-scripts', get_template_directory_uri() . '/js/combined.min.js', array('jquery'), '20240708', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
 	if ( astrid_blog_layout() == 'masonry-layout' && (is_home() || is_archive()) ) {
-		wp_enqueue_script( 'astrid-masonry-init', get_template_directory_uri() . '/js/masonry-init.js', array('masonry'), '', true );		
+		wp_enqueue_script( 'astrid-masonry-init', get_template_directory_uri() . '/js/masonry-init.min.js', array('masonry'), '', true );		
 	}
 
 }
@@ -226,7 +226,7 @@ function astrid_customizer_styles($hook) {
     if ( ( 'customize.php' != $hook ) && ( 'widgets.php' != $hook ) ) {
         return;
     } 	
-	wp_enqueue_style( 'astrid-customizer-styles', get_template_directory_uri() . '/inc/framework/css/customizer.css' );	
+	wp_enqueue_style( 'astrid-customizer-styles', get_template_directory_uri() . '/inc/framework/css/customizer.min.css' );	
 }
 add_action( 'admin_enqueue_scripts', 'astrid_customizer_styles' );
 
@@ -514,7 +514,7 @@ require get_template_directory() . '/woocommerce/woocommerce.php';
 add_theme_support( 'align-wide' );
 
 function astrid_editor_styles() {
-	wp_enqueue_style( 'astrid-block-editor-styles', get_theme_file_uri( '/astrid-gutenberg-editor-styles.css' ), '', '1.0', 'all' );
+	wp_enqueue_style( 'astrid-block-editor-styles', get_theme_file_uri( '/css/styles/gutenberg.min.css' ), '', '1.0', 'all' );
 
 	$body_font 		= get_theme_mod('body_font_name', '//fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic');
 	$headings_font 	= get_theme_mod('headings_font_name', '//fonts.googleapis.com/css?family=Josefin+Sans:300italic,300');

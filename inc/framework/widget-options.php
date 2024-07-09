@@ -157,7 +157,7 @@ class Atframework_Widget_Options {
       return;
     }     
     wp_enqueue_style( 'wp-color-picker' );     
-    wp_enqueue_script( 'astrid-picker', get_template_directory_uri() . '/inc/framework/js/colorpicker.js', array( 'wp-color-picker' ), false, true );  
+    wp_enqueue_script( 'astrid-picker', get_template_directory_uri() . '/inc/framework/js/colorpicker.min.js', array( 'wp-color-picker' ), false, true );  
   }
 
 }
