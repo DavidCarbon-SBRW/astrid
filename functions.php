@@ -183,7 +183,8 @@ require get_template_directory() . "/inc/framework/widgets/social-widget.php";
  * Enqueue scripts and styles.
  */
 function astrid_scripts() {
-    wp_enqueue_style( 'astrid-style', get_template_directory_uri() . '/css/styles/classic.min.css');
+    wp_enqueue_style( 'astrid-style-colors', get_template_directory_uri() . '/css/styles/base.colors.min.css');
+    wp_enqueue_style( 'astrid-style', get_template_directory_uri() . '/css/styles/base.min.css');
 
 	$body_font 		= get_theme_mod('body_font_name', '//fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic');
 	$headings_font 	= get_theme_mod('headings_font_name', '//fonts.googleapis.com/css?family=Josefin+Sans:300italic,300');
@@ -514,6 +515,7 @@ require get_template_directory() . '/woocommerce/woocommerce.php';
 add_theme_support( 'align-wide' );
 
 function astrid_editor_styles() {
+    wp_enqueue_style( 'astrid-block-editor-styles-colors', get_theme_file_uri( '/css/styles/gutenberg.colors.min.css' ), '', '1.0', 'all' );
 	wp_enqueue_style( 'astrid-block-editor-styles', get_theme_file_uri( '/css/styles/gutenberg.min.css' ), '', '1.0', 'all' );
 
 	$body_font 		= get_theme_mod('body_font_name', '//fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic');
