@@ -37,6 +37,8 @@
     --main-navigation-list-style-after-border-bottom-color: #fcd088;
     --main-navigation-list-style-bg-color: #1c1e21;
     --main-navigation-attribute-hover-color: #fcd088;
+    --main-navigation-list-style-attribute-color: #fff;
+    --main-navigation-sub-list-style-attribute-color: #fff;
     /* Mobile menu */
     --buttonmenu-color: #fff;
     --buttonmenu-before-color: #fff;
@@ -142,7 +144,7 @@
     /*--------------------------------------------------------------
 	## Footer
 	--------------------------------------------------------------*/
-    --footer-info-bg-color: #202529;
+    --footer-info-bg-color: rgba(32, 37, 41, 1);
     --footer-widget-border-bottom-color: rgba(255, 255, 255, 0.08);
     --site-footer-attribute-color: #a3aaaa;
     --site-footer-attribute-hover-color: #fcd088;

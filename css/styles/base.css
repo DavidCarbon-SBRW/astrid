@@ -36,8 +36,23 @@ blockquote {
 p {
     margin-bottom: 20px;
 }
+h1 {
+    font-size: 36px;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 24px;
+}
 h4 {
     font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 12px;
 }
 /*--------------------------------------------------------------
 # Tables
@@ -286,6 +301,8 @@ select {
 }
 
 .main-navigation ul ul li {
+    display: block; 
+    text-align: left;
 }
 
 .main-navigation a:hover,
@@ -315,6 +332,14 @@ select {
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current-menu-ancestor > a {
+}
+
+.main-navigation ul li a { 
+    color: var(--main-navigation-list-style-attribute-color);
+}
+
+.main-navigation ul ul li a {
+    color: var(--main-navigation-sub-list-style-attribute-color);
 }
 
 /* Mobile menu */
@@ -486,6 +511,7 @@ select {
     padding: 30px;
     background-color: var(--widget-area-bg-color);
     border: 1px solid var(--widget-area-border-color);
+    /* color: ; */
 }
 .widget ul {
     padding: 0 0 0 20px;
@@ -1437,6 +1463,7 @@ section.at-3-col {
 ## Structure
 --------------------------------------------------------------*/
 .site-title {
+    font-family: var(--font-two);
     font-size: 36px;
     margin: 0;
     letter-spacing: 1px;
@@ -2088,15 +2115,6 @@ body.page-template-page_widgetized {
 /*--------------------------------------------------------------
 ## Responsive
 --------------------------------------------------------------*/
-@media only screen and (max-width: 1024px) {
-    .main-navigation {
-        display: none;
-    }
-    .mobile-nav,
-    .btn-menu {
-        display: block;
-    }
-}
 @media only screen and (max-width: 1199px) {
     .woocommerce .content-area {
         width: 610px;
@@ -2146,7 +2164,8 @@ body.page-template-page_widgetized {
         display: none;
     }
     .mobile-nav,
-    .small-header {
+    .small-header,
+    .btn-menu {
         display: block;
     }
     .site-header .container {
@@ -2162,7 +2181,8 @@ body.page-template-page_widgetized {
     }
     .site-header.has-single,
     .site-header.has-video,
-    .site-header.has-header {
+    .site-header.has-header,
+    .site-header.has-shortcode {
         position: relative;
         background-color: var(--responsive-site-header-video-bg-color);
     }
